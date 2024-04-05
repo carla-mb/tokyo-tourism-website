@@ -1,0 +1,23 @@
+{ 
+    "extends": ["stylelint-config-recommended-scss"], 
+    "rules": {
+        "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+        "unit-allowed-list": ["rem", "px", "%", "vh", "fr"],
+        "declaration-no-important": [true, {"severity": "warning"}],
+        "max-nesting-depth": 3,
+        "color-function-notation": "modern",
+        "color-named": "never",
+        "string-no-newline": true,
+        "no-duplicate-selectors": true,
+        "declaration-empty-line-before": ["always", {
+            "except": ["after-declaration", "first-nested"],
+            "ignore": ["after-comment", "inside-single-line-block"]
+        }],
+        "rule-empty-line-before": ["always", {
+            "except": ["first-nested"],
+            "ignore": ["after-comment"]
+        }],
+        "at-rule-empty-line-before": "always"
+    }
+}
+

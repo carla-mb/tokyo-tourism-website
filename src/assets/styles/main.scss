@@ -4,10 +4,12 @@
  */
 
 /**
- * Import variables
+ * Import variables and functions
  */
 
 @import "variables";
+
+@import "queries";
 
 /**
  * Import npm dependencies
@@ -18,12 +20,29 @@
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
 
+@import "npm:@fortawesome/fontawesome-free/css/all.css";
 /**
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
 
 @import "layouts/home";
+
+@import "layouts/header";
+
+@import "layouts/menu";
+
+@import "layouts/introduction";
+
+@import "layouts/attractions";
+
+@import "layouts/activities";
+
+@import "layouts/tokyo-stay";
+
+@import "layouts/contact";
+
+@import "layouts/footer";
 
 /**
  * Do NOT include anything else in this file!

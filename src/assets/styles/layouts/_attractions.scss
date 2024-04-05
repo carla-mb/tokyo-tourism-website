@@ -1,0 +1,47 @@
+@use "sass:color";
+
+/* ATTRACTIONS SECTION */
+
+@include sm {
+  .attraction__figure {
+      width: 70%;
+      margin: 0 auto;
+  }
+}
+
+@include md {
+    .attractions-container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: auto auto;
+    }
+      
+    .attraction {
+        background-color: rgba(color.adjust($main-green, $lightness: 20%), .9);
+        padding: 10px;
+
+        &__figure {
+            width: 100%;
+
+            @include lg {
+                max-width: 75%;
+            }
+        }
+    }
+}
+
+@include lg {
+    .attractions-container {
+        max-width: 80%;
+    }
+
+    #atracciones {
+        .section__description {
+            max-width: 80%;
+        }
+    }
+
+    .attraction {
+        padding: 10px 20px;
+    }
+}

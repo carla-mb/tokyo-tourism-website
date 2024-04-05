@@ -1,12 +1,14 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol";
-$font-family-serif: "Georgia", "Times New Roman", serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 
-$mqMinWidth: 420px;
+$main-green: rgb(26 189 119);
+$light-green-bg: rgb(210 249 232); 
+$white-text: rgb(250 250 250);
+$links-color: rgb(189 26 96);
+$secondary-red: rgb(247 79 115);
+
+$font-family-text: 'Open Sans', sans-serif;
+$font-family-brand: 'Red Hat Display', sans-serif;

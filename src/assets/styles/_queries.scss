@@ -1,0 +1,38 @@
+/*grid-breakpoints:
+    xs: <576px (móvil pequeño)
+    sm: 576px, (móvil)
+    md: 768px, (tablet)
+    lg: 992px, (ordenadores pequeños/medianos)
+    xl: 1200px, (ordenadores grandes)
+    xxl: 1400px (ordenadores extra grandes)
+*/
+
+@mixin xs {
+    
+    @media (max-width: 576px) { @content; }
+}
+
+@mixin sm {
+
+    @media (min-width: 576px) { @content; }
+}
+
+@mixin md {
+
+    @media (min-width: 768px) { @content; }
+}
+
+@mixin lg {
+
+    @media (min-width: 992px) { @content; }
+}
+
+@mixin xl {
+
+    @media (min-width: 1200px) { @content; }
+}
+
+@mixin xxl {
+
+    @media (min-width: 1400px) { @content; }
+}

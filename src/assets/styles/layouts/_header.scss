@@ -1,0 +1,54 @@
+/* HEADER */
+
+.header {
+    background-color: $main-green;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    text-align: center;
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        width: 45px;
+        height: auto;
+
+        @include lg {
+            width: 50px;
+        }
+    }
+
+    &__title {
+        color: $white-text;
+        font-size: 1.5rem;
+        font-family: $font-family-brand;
+        letter-spacing: -0.1rem;
+        
+        @include sm {
+            font-size: 1.8rem;
+        }
+
+        @include xl {
+            font-size: 2.2rem;
+            letter-spacing: -0.01rem;
+        }
+    }
+
+    @include lg {
+        justify-content: left;
+
+        &__title {
+            font-size: 2rem;
+        }
+
+        &__content {
+            margin-left: 20px;
+        }
+    }
+}

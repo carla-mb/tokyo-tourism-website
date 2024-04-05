@@ -1,0 +1,57 @@
+@use "sass:color";
+
+/* TOKYO-STAY SECTION */
+
+.tokyo-stay {
+    &__icon {
+        color: $main-green;
+    }
+
+    @include lg {
+        &__accomodation {
+            max-width: 80%;
+        }
+
+        &__transport {
+            max-width: 80%;
+        }
+
+        &__food {
+            max-width: 80%;
+        }
+    }
+}
+
+.food-container {
+    
+    @include sm {
+        display: grid;
+        grid-template-columns: a auto;
+
+        &__title {
+            display: none;
+        }  
+
+        &__item {
+            display: grid;
+            grid-template-columns: 70% auto;
+            gap: 1.2rem;
+            margin: 0 10px 15px 0;
+            padding: 10px 20px;
+            background-color: rgba(color.adjust($main-green, $lightness: 20%), .9);
+        }
+
+        &__figure {
+            margin: auto;
+        }  
+
+        &--highlighted {
+            color: color.adjust($secondary-red, $lightness: 5%);
+            font-weight: 700;
+        }
+    }
+
+    @include md {
+        max-width: 80%;
+    }
+}

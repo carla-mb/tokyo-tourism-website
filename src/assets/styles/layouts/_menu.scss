@@ -1,0 +1,153 @@
+@use "sass:color";
+
+/* MOBILE MENU */
+
+.menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: $white-text;
+    font-size: inherit;
+    padding-left: 10px;
+
+    @include sm {
+        display: none;
+    }
+}
+  
+.menu {
+    display: none;
+    background-color: $main-green;
+    color: $white-text;
+    box-shadow: 0px -2px 5px rgba(0 0 0 / .2);
+
+    &__text {
+        padding-left: 30px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $white-text;
+
+        &--active {
+            color: color.adjust($secondary-red, $lightness: 18%);
+        }
+    }
+    
+    &__item {
+        list-style-type: none;
+        font-size: 14px;
+        font-weight: bold;  
+        padding-right: 20px;
+
+        &:not(:last-child) {
+            padding-bottom: .9rem;
+        }
+
+        &--active {
+            color: color.adjust($secondary-red, $lightness: 18%);
+        }
+
+        &::before {
+            font-family: "Font Awesome 5 Free", sans-serif;
+            margin-right: 0.5rem;
+        }  
+
+        &:nth-child(1)::before {
+            content: "\f19c";
+        }
+
+        &:nth-child(2)::before {
+            content: "\f554";
+        }
+
+        &:nth-child(3)::before {
+            content: "\f594";
+        }
+
+        &:nth-child(4)::before {
+            content: "\f0e0";
+        }
+    }
+
+    &.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include xs {
+        position: fixed;
+        top: 45;
+        border-radius: 5%;
+        width: 55%;
+        background-color: $main-green;
+        opacity: .95;
+        padding: 1rem 0;
+        text-align: left;
+        z-index: 1;
+        box-shadow: 0px -2px 5px rgba(0 0 0 / .2);
+        left: 32%;
+    }
+}
+
+/* DESKTOP MENU */
+
+.desktop-menu {
+    
+    @include xs {
+        display: none;
+    }
+
+    @include sm {
+        position: fixed;
+        width: 100%;
+        margin-top: 0;
+        top: 75px;
+        z-index: 10;
+        background-color: $light-green-bg;
+        border-bottom: 1.5px solid $main-green;
+      
+        &__list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+      
+        &__item {
+            list-style-type: none;
+            font-size: .65rem; 
+
+            @include md {
+                font-size: .8rem;
+            }
+
+            @include lg {
+                font-size: 1rem;
+            }
+
+            @include xl {
+                font-size: 1.1rem;
+            }
+        }
+      
+        &__link {
+            text-decoration: none;
+            color: $main-green;
+
+            &:hover {
+                color: color.adjust($main-green, $lightness: -18%);
+            }
+        
+            &--active {
+                color: color.adjust($secondary-red, $lightness: 10%);
+                font-weight: 600;
+            }
+        }
+    }
+
+    @include xl {
+        top: 80px;
+    }
+}

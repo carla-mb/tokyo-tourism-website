@@ -1,0 +1,88 @@
+@use "sass:color";
+
+/* CONTACT SECTION */
+
+.contact {
+    &__form {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-size: .8rem;
+        color: $main-green;
+        font-weight: 500;
+
+        @include md {
+            font-size: .85rem;
+        }
+
+        @include lg {
+            font-size: .9rem;
+        }
+    }
+
+    &__form-group {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    &__input,
+    &__textarea {
+        width: 93%;
+        padding: 10px;
+        border: 1px solid $main-green;
+        border-radius: 5px;
+        font-size: .9rem;
+        font-family: $font-family-text;
+
+        &:focus {
+            outline: 1px solid $main-green;
+        }
+
+        @include sm {
+            width: 80%;
+        }
+
+        @include lg {
+            width: 50%;
+            font-size: 1rem;
+        }
+    }
+
+    .contact__textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    &__submit-btn {
+        padding: 8px 16px;
+        background-color: $main-green;
+        color: $white-text;
+        border: none;
+        border-radius: 5px;
+        font-size: .9rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: color.adjust($main-green, $lightness: -10%);
+        }
+
+        @include lg {
+            font-size: 1rem;
+            padding: 10px 20px;
+        }
+    }
+}
+
+@include lg {
+    #contacto {
+        .section__description {
+            max-width: 55%;
+        }
+    }
+}
