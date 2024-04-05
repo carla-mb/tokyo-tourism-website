@@ -32,7 +32,7 @@
         color: $white-text;
 
         &--active {
-            color: color.adjust($secondary-red, $lightness: 18%);
+            color: $links-color;
         }
     }
     
@@ -47,7 +47,7 @@
         }
 
         &--active {
-            color: color.adjust($secondary-red, $lightness: 18%);
+            color: $links-color;
         }
 
         &::before {
@@ -118,6 +118,7 @@
         &__item {
             list-style-type: none;
             font-size: .65rem; 
+            font-weight: 600;
 
             @include md {
                 font-size: .8rem;
@@ -134,15 +135,15 @@
       
         &__link {
             text-decoration: none;
-            color: $main-green;
+            color: color.adjust($main-green, $lightness: -10%);
 
             &:hover {
-                color: color.adjust($main-green, $lightness: -18%);
+                color: color.adjust($main-green, $lightness: -20%);
             }
         
             &--active {
-                color: color.adjust($secondary-red, $lightness: 10%);
-                font-weight: 600;
+                color: $links-color;
+                font-weight: 700;
             }
         }
     }

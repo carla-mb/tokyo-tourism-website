@@ -24,6 +24,13 @@
 .activity,
 .tokyo-stay,
 .food-container {
+    &__description {
+        
+        @include lg {
+            font-size: 1.1rem;
+        }
+    }
+
     &__figure {
         text-align: center;
         margin-inline-start: 0;
@@ -36,7 +43,11 @@
     }
 
     &__caption {
-        font-size: 12px;
+        font-size: .8rem;
+
+        @include lg {
+            font-size: .95rem;
+        }
     }
 
     &__link {

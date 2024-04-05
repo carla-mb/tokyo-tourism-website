@@ -12,11 +12,11 @@
 
     &__link {
         text-decoration: none;
-        color: $links-color;
-        font-weight: 600;
+        color: $white-text;
+        font-weight: 700;
       
         &:hover {
-            color: color.adjust($links-color, $lightness: -10%);
+            color: color.adjust($main-green, $lightness: -20%);
         }
     }
 

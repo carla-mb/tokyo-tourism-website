@@ -46,8 +46,8 @@
         }  
 
         &--highlighted {
-            color: color.adjust($secondary-red, $lightness: 5%);
-            font-weight: 700;
+            color: $links-color;
+            font-weight: 800;
         }
     }
 

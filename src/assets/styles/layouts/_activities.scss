@@ -5,10 +5,10 @@
 .activity {
     &--highlighted {
       color: $main-green;
-      font-weight: 700;
+      font-weight: 800;
 
       @include md {
-        color: color.adjust($secondary-red, $lightness: 5%);
+        color: $links-color;
       }
     }
 
